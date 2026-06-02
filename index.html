@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -6,41 +7,104 @@
     <title>안태인 포트폴리오</title>
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, sans-serif;
             max-width: 1000px;
             margin: auto;
             padding: 30px;
             line-height: 1.8;
-            background-color: #f5f5f5;
+            background-color: #f4f7fb;
+            color: #333;
         }
 
         header {
             text-align: center;
-            padding: 30px;
-            background-color: #222;
+            padding: 50px 30px;
+            background: linear-gradient(135deg, #1e88e5, #0d47a1);
             color: white;
-            border-radius: 10px;
+            border-radius: 15px;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 36px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        nav {
+            background-color: white;
+            margin-top: 20px;
+            padding: 15px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 10px;
+            z-index: 10;
+        }
+
+        nav a {
+            color: #1e88e5;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #0d47a1;
         }
 
         section {
             background-color: white;
-            margin-top: 20px;
-            padding: 20px;
-            border-radius: 10px;
+            margin-top: 25px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
         h2 {
             color: #1e88e5;
+            border-bottom: 2px solid #e3f2fd;
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: #333;
         }
 
         ul {
-            padding-left: 20px;
+            padding-left: 25px;
         }
 
-        a {
-            color: #1e88e5;
+        .skills span {
+            display: inline-block;
+            background-color: #e3f2fd;
+            color: #0d47a1;
+            padding: 8px 14px;
+            margin: 6px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #1e88e5;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
             text-decoration: none;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: #0d47a1;
         }
 
         footer {
@@ -56,49 +120,62 @@
 <header>
     <h1>안태인 Portfolio</h1>
     <p>Artificial Intelligence Engineering Student</p>
+    <p>AI & Software Development Portfolio</p>
 </header>
 
-<section>
+<nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+    <a href="#goal">Goal</a>
+</nav>
+
+<section id="about">
     <h2>About Me</h2>
 
     <p>
-        조선대학교 인공지능공학과에 재학 중이며
+        조선대학교 인공지능공학과에 재학 중이며,
         다양한 소프트웨어 개발 기술에 관심을 가지고 있습니다.
     </p>
 
     <p>
-        앞으로 다양한 프로젝트를 통해 문제 해결 능력을 향상시키고,
+        현재 Python, C/C++, Git을 학습하고 있으며,
+        앞으로 다양한 프로젝트를 통해 문제 해결 능력을 향상시키고자 합니다.
         AI와 소프트웨어 개발 분야에서 전문성을 갖춘 개발자로 성장하는 것을 목표로 하고 있습니다.
     </p>
 </section>
 
-<section>
-   <h2>Education</h2>
+<section id="education">
+    <h2>Education</h2>
 
-<ul>
-    <li><b>University:</b> Chosun University</li>
-    <li><b>Department:</b> Artificial Intelligence Engineering</li>
-    <li><b>Year:</b> 2nd Year</li>
-    <li><b>Relevant Coursework:</b></li>
     <ul>
-        <li>Data Structures</li>
-        <li>Open Source Software</li>
-        <li>Machine Learning</li>
+        <li><b>University:</b> Chosun University</li>
+        <li><b>Department:</b> Artificial Intelligence Engineering</li>
+        <li><b>Year:</b> 2nd Year</li>
+        <li><b>Relevant Coursework:</b></li>
+        <ul>
+            <li>Data Structures</li>
+            <li>Open Source Software</li>
+            <li>Machine Learning</li>
+        </ul>
     </ul>
-</ul>
 </section>
 
-<section>
+<section id="skills">
     <h2>Skills</h2>
 
-    <ul>
-        <li>Python - Basic</li>
-        <li>C/C++ - Basic</li>
-        <li>Git & GitHub - Basic</li>
-    </ul>
+    <div class="skills">
+        <span>Python - Basic</span>
+        <span>C/C++ - Basic</span>
+        <span>Git & GitHub - Basic</span>
+    </div>
 </section>
 
-<section>
+<section id="projects">
     <h2>Projects</h2>
 
     <h3>AI-Based Study Assistant (Planned)</h3>
@@ -119,10 +196,13 @@
             <li>AI 기반 학습 효율 향상</li>
             <li>학습 내용의 체계적인 정리 지원</li>
             <li>자기주도 학습 환경 구축</li>
+        </ul>
+        <li><b>GitHub:</b> To be updated</li>
+        <li><b>Demo / Image:</b> To be updated</li>
     </ul>
 </section>
 
-<section>
+<section id="experience">
     <h2>Experience</h2>
 
     <ul>
@@ -132,32 +212,38 @@
     </ul>
 </section>
 
-<h2>CV / Resume</h2>
+<section id="resume">
+    <h2>CV / Resume</h2>
 
-<p>
-    <a href="./resume.pdf" target="_blank">
+    <p>
+        아래 버튼을 클릭하면 이력서 PDF를 확인할 수 있습니다.
+    </p>
+
+    <a class="button" href="./resume.pdf" target="_blank">
         Download My Resume
     </a>
-</p>
+</section>
 
-<section>
+<section id="contact">
     <h2>Contact</h2>
 
     <ul>
-        <li>Email: ahntaein12@gmail.com</li>
-        <li>GitHub:
-            <a href="https://github.com/ahntaein12-droid">
+        <li><b>Email:</b> ahntaein12@gmail.com</li>
+        <li><b>GitHub:</b>
+            <a href="https://github.com/ahntaein12-droid" target="_blank">
                 https://github.com/ahntaein12-droid
             </a>
         </li>
     </ul>
 </section>
 
-<section>
-    <h2>Career Goal</h2>
+<section id="goal">
+    <h2>Career Goal / Future Plan</h2>
 
     <ul>
         <li>AI Developer</li>
+        <li>Software Developer</li>
+        <li>개발 역량과 AI 활용 능력을 함께 갖춘 개발자로 성장</li>
     </ul>
 </section>
 
@@ -167,3 +253,4 @@
 
 </body>
 </html>
+```
